@@ -123,7 +123,7 @@ typedef enum {
 /** 图片滚动方向，默认为水平滚动 */
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
-@property (nonatomic, weak) id<SDCycleScrollViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id<SDCycleScrollViewDelegate> delegate;
 
 /** block方式监听点击 */
 @property (nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
