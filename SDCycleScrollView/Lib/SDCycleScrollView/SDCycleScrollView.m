@@ -147,6 +147,10 @@ NSString * const ID = @"SDCycleScrollViewCell";
     mainView.delegate = self;
     mainView.scrollsToTop = NO;
     [self addSubview:mainView];
+    if (@available(iOS 11.0, *)) {
+        mainView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        mainView.insetsLayoutMarginsFromSafeArea = NO;
+    }
     _mainView = mainView;
 }
 
